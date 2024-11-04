@@ -1,0 +1,522 @@
+{
+	"info": {
+		"_postman_id": "b9afb851-1ddd-4cde-bfbb-9170b1b7f19c",
+		"name": "News Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26693209",
+		"_collection_link": "https://planetary-moon-203785.postman.co/workspace/general~dd4b6c3b-3988-4230-8e82-f16f3bc1807a/collection/26693209-b9afb851-1ddd-4cde-bfbb-9170b1b7f19c?source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "http://localhost:8080/auth/sign-up",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"2222\",\r\n    \"password\":\"2222\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/sign-up",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/auth/sign-in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"2222\",\r\n    \"password\":\"2222\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/sign-in",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"sign-in"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Article",
+			"item": [
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoidXNlciIsImlkIjo1LCJzdWIiOiIxMTExIiwiaWF0IjoxNzMwNjgxMjk1LCJleHAiOjE3MzA4MjUyOTV9.UdsfQvFbNPCsW2LUdzjlPrEr8AZkcSxXyIi5jT_1__8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/article/{{id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"article",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoidXNlciIsImlkIjo1LCJzdWIiOiIxMTExIiwiaWF0IjoxNzMwNjgxMjk1LCJleHAiOjE3MzA4MjUyOTV9.UdsfQvFbNPCsW2LUdzjlPrEr8AZkcSxXyIi5jT_1__8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"hohoho\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/article/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"article",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoidXNlciIsImlkIjo1LCJzdWIiOiIxMTExIiwiaWF0IjoxNzMwNjgxMjk1LCJleHAiOjE3MzA4MjUyOTV9.UdsfQvFbNPCsW2LUdzjlPrEr8AZkcSxXyIi5jT_1__8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"gggggg1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/article/{{id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"article",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoidXNlciIsImlkIjo1LCJzdWIiOiIxMTExIiwiaWF0IjoxNzMwNjgxMjk1LCJleHAiOjE3MzA4MjUyOTV9.UdsfQvFbNPCsW2LUdzjlPrEr8AZkcSxXyIi5jT_1__8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/article/{{id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"article",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Article Image Block",
+			"item": [
+				{
+					"name": "Create ArticleImageBlock",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoidXNlciIsImlkIjo1LCJzdWIiOiIxMTExIiwiaWF0IjoxNzMwNjgxMjk1LCJleHAiOjE3MzA4MjUyOTV9.UdsfQvFbNPCsW2LUdzjlPrEr8AZkcSxXyIi5jT_1__8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"articleId\": 6,\r\n  \"position\": 1,\r\n  \"imageUrl\": \"https://example.com/image.jpg\",\r\n  \"caption\": \"An example image\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/article-image-blocks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"article-image-blocks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update ArticleImageBlock",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoidXNlciIsImlkIjo1LCJzdWIiOiIxMTExIiwiaWF0IjoxNzMwNjgxMjk1LCJleHAiOjE3MzA4MjUyOTV9.UdsfQvFbNPCsW2LUdzjlPrEr8AZkcSxXyIi5jT_1__8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"position\": 2,\r\n  \"imageUrl\": \"https://example.com/updated-image.jpg\",\r\n  \"caption\": \"Updated caption\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/article-image-blocks/{{id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"article-image-blocks",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete ArticleImageBlock",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoidXNlciIsImlkIjo1LCJzdWIiOiIxMTExIiwiaWF0IjoxNzMwNjgxMjk1LCJleHAiOjE3MzA4MjUyOTV9.UdsfQvFbNPCsW2LUdzjlPrEr8AZkcSxXyIi5jT_1__8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/article-image-blocks/{{id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"article-image-blocks",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Article Text Block",
+			"item": [
+				{
+					"name": "Create ArticleTextBlock",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoidXNlciIsImlkIjo1LCJzdWIiOiIxMTExIiwiaWF0IjoxNzMwNjgxMjk1LCJleHAiOjE3MzA4MjUyOTV9.UdsfQvFbNPCsW2LUdzjlPrEr8AZkcSxXyIi5jT_1__8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"articleId\": 6,\r\n  \"position\": 1,\r\n  \"content\": \"This is a text block content\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/article-text-blocks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"article-text-blocks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update ArticleTextBlock",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoidXNlciIsImlkIjo1LCJzdWIiOiIxMTExIiwiaWF0IjoxNzMwNjgxMjk1LCJleHAiOjE3MzA4MjUyOTV9.UdsfQvFbNPCsW2LUdzjlPrEr8AZkcSxXyIi5jT_1__8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"position\": 2,\r\n  \"content\": \"Updated text block content\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/article-text-blocks/{{id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"article-text-blocks",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete ArticleTextBlock",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoidXNlciIsImlkIjo1LCJzdWIiOiIxMTExIiwiaWF0IjoxNzMwNjgxMjk1LCJleHAiOjE3MzA4MjUyOTV9.UdsfQvFbNPCsW2LUdzjlPrEr8AZkcSxXyIi5jT_1__8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/article-text-blocks/{{id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"article-text-blocks",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Article Quote Block",
+			"item": [
+				{
+					"name": "Create ArticleQuoteBlock",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoidXNlciIsImlkIjo1LCJzdWIiOiIxMTExIiwiaWF0IjoxNzMwNjgxMjk1LCJleHAiOjE3MzA4MjUyOTV9.UdsfQvFbNPCsW2LUdzjlPrEr8AZkcSxXyIi5jT_1__8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"articleId\": 6,\r\n  \"position\": 1,\r\n  \"quote\": \"This is a quote\",\r\n  \"author\": \"Author Name\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/article-quote-blocks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"article-quote-blocks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update ArticleQuoteBlock",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoidXNlciIsImlkIjo1LCJzdWIiOiIxMTExIiwiaWF0IjoxNzMwNjgxMjk1LCJleHAiOjE3MzA4MjUyOTV9.UdsfQvFbNPCsW2LUdzjlPrEr8AZkcSxXyIi5jT_1__8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"position\": 2,\r\n  \"quote\": \"Updated quote content\",\r\n  \"author\": \"Updated Author\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/article-quote-blocks/{{id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"article-quote-blocks",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete ArticleQuoteBlock",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoidXNlciIsImlkIjo1LCJzdWIiOiIxMTExIiwiaWF0IjoxNzMwNjgxMjk1LCJleHAiOjE3MzA4MjUyOTV9.UdsfQvFbNPCsW2LUdzjlPrEr8AZkcSxXyIi5jT_1__8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/article-quote-blocks/{{id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"article-quote-blocks",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
